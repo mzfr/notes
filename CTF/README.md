@@ -29,6 +29,7 @@ Just some tools we use
 
 ## Crypto
 
+- https://quipqiup.com/
 - caesar: https://cryptii.com/pipes/caesar-cipher
 - vignere: https://www.guballa.de/vigenere-solver
 - rot: https://www.dcode.fr/rot-cipher
@@ -72,6 +73,9 @@ Just some tools we use
 + Images:
     - https://29a.ch/photo-forensics/#forensic-magnifier
     - http://stylesuxx.github.io/steganography/
++ Text Files
+    - dos2unix
+        + If the file contain `CRLF line terminators`
 
 +  If given text looks like shit and you have no clue what it is then check for any [esoteric language](https://en.wikipedia.org/wiki/Esoteric_programming_language)
     - [linguist](https://github.com/github/linguist)
@@ -90,6 +94,16 @@ Just some tools we use
     - Sonic visualize: https://www.sonicvisualiser.org/
     - Audacity: https://www.audacityteam.org/
     - Check spectrogram first for any given audio file and don't forget to change colors of spectrogram.
+
++ https://www.monkey.org/~dugsong/dsniff/
+
+## Malware analysis
+
++ Volatility
++ https://www.hybrid-analysis.com/
+    * Upload file and perform malware analysis
++ https://digital-forensics.sans.org/media/SANS_Poster_2018_Hunt_Evil_FINAL.pdf
+    * Some informations about the files present in windows mem dump
 
 ## Misc
 
@@ -126,3 +140,17 @@ Just some tools we use
 * strings
 * cat
 * |(pipe)
+
+
+# Leaks
++ https://gitlab.com/glicOne/shadowbroker
+
++ Hack scripts
+    * https://gitlab.com/glicOne/hack_scripts
++ books
+    * https://gitlab.com/glicOne/knowledge-base
+    * https://github.com/RomaniukVadim/knowledge-base
++ CTF wiki
+    * https://gitlab.com/glicOne/ctf-wiki
++ Terminator ?
+    * https://gitlab.com/glicOne/Terminator
