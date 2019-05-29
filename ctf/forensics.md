@@ -2,6 +2,9 @@
 
 Forensics is a really good field but can be very frustrating sometimes. These are the things I have learned till now about this field.
 
+Everything that I've learned in the field of `Forensics` is from __@UnblvR__
+His knowledge in this field is God level and mostly I solve this category of challenges with him.
+
 ## Initiation
 
 These are the some tools/command you should always start with or atleast test for forensics challenge
@@ -95,7 +98,7 @@ This will generate a lot of images with all the different pixels in different sh
 
 I don't use this tool anymore but this tool is worth a try. The problem with this tool is that it doesn't support jpeg and different type of extensions\(only supports PNG\). I used this tool for a while but now for LSB and stuff you can use StegoVeritas.
 
-## Audio analysis
+# Audio analysis
 
 This is a category of forensics challenges are the weird ones or at least that's how I feel :smile:
 
@@ -105,7 +108,7 @@ Now there isn't anything fixed but most of the time challenge creator puts the f
 
 In many audio files, there would be some high pitch, in that case, you can try the [audio morse decoder](https://morsecode.scphillips.com/labs/decoder/). Just upload the file and try to change the speed\(only if you are sure that it's a morse code\).
 
-## Data/Broken files
+# Data/Broken files
 
 Now, this is the most difficult category of challenges. They are difficult because they are totally vague.
 
@@ -175,7 +178,7 @@ We are given a file which is of say `.PNG` extension. Using `file` command on it
 
 The real game could be that creator of the challenge took a ZIP file and replaced the header of that ZIP file with the headers of PNG so tools are reporting it as PNG. But the problem with these kinds of challenges is that they are totally based on how much experience you have with file and stuff. Because to solve these kinds of challenge you'll have to open the file in a hex editor\(I use [okteta](https://www.kde.org/applications/utilities/okteta/) on arch\) and then try to recognize the file with the other bytes in the file. Then figure out which byte is messed up and fix that one.
 
-## Memory forensics
+# Memory forensics
 
 I just love these kinds of challenges, even though I am very bad at them but I really enjoy working on them.
 
@@ -213,25 +216,46 @@ volatility  — plugins=<path-to-mimkatz-file> — profile=<profile-name> 
 
 Sometime mimikatz doesn't give any output in that case you can just follow the first method.
 
-**2\)** Find the IP and port for computer
+**2\)** Find the IP and port for computer:
 
-Just run the netscan command and go through the output.
+    Just run the netscan command and go through the output.
 
 **3\)** Find the content clipboard
 
-Again use the simple `clipboard` command to get the content of the clipboard.
+    Again use the simple `clipboard` command to get the content of the clipboard.
 
 **4\)** Finding out the malware
 
-This is the real reason these kinds of challenges are made. In real life scenario, people take memory dumps just to analyze for malware.
+    This is the real reason these kinds of challenges are made.
+    In real life scenario, people take memory dumps just to analyze for malware.
 
-Finding malware could be confusing if you don't know what files stays in what place and what they do. For that kind of information, you can read
+Finding malware could be confusing if you don't know what files stays in what place and what they do. For that kind of information, you can read:
 
-1\) [https://www.sans.org/security-resources/posters/dfir-find-evil/35/download](https://www.sans.org/security-resources/posters/dfir-find-evil/35/download) 2\) [https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download](https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download)
+1\) [https://www.sans.org/security-resources/posters/dfir-find-evil/35/download](https://www.sans.org/security-resources/posters/dfir-find-evil/35/download)
+
+2\) [https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download](https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download)
 
 Basically, you have to go through the `pstree` and see which process is the child to some weird parent process. Say there is a process named `iexplorer.exe` running but it has a child process named `cmd.exe` which is weird because if you think about it why would `iexplorer` run `cmd` for anything. So then you can start looking deeply into those process.
 
 Also sometime you might have to extract out those files and try to run those malware\(please do that in VM :wink:\)
+
+***
+
+Another type memory forensics challenge I came across was in one CTF where we were given the memory dump along with a `.dwarf` & `system.map` file.
+If you see these files provided with the memory dump then it's the profile for that memory dump.
+Basically if you run `volatility` on that memory dump it won't be able to suggest the `profile` of that dump. That is where those other two files come in handy.
+
+Step to use those files:
+
+1) Zip `.dwarf` and `system.map` file together.
+2) Put that zip file in a folder
+3) Pass that folder to the `--plugin` argument in volatility.
+
+Ex:
+
+`vol.py --plugins=/path/to/zip/containing/folder -f <memdump name>  imageinfo`
+
+**Note** - It's important that you keep the zip file into a folder and pass that folder to the plugin argument
 
 Nothing much can be said about this field because things are pretty fixed like you know the command are known and all it needs is patience to figure out stuff.
 
@@ -253,7 +277,7 @@ You can also use [scapy](https://scapy.net/) to grab some data that might not be
 
 Another great tool for PCAP is [ngrep](https://github.com/jpr5/ngrep)
 
-## File System
+# File System
 
 These kind of challenges involve `.img` or similar files from which you are expected to extract content or deleted files and do the stuff. Most of these challenges are pretty straight forward\(unless bytes of those files are messed up\).
 

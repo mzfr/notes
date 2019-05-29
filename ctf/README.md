@@ -50,49 +50,6 @@ Just some tools we use
 * md5 hash
   * [https://www.md5online.org](https://www.md5online.org)
 
-### Forensics:
-
-* tesdisk
-  * [https://www.cgsecurity.org/wiki/TestDisk](https://www.cgsecurity.org/wiki/TestDisk)
-* Sleuthkit
-  * [https://www.sleuthkit.org/sleuthkit/](https://www.sleuthkit.org/sleuthkit/)
-  * [https://www.sleuthkit.org/sleuthkit/framework.php](https://www.sleuthkit.org/sleuthkit/framework.php)
-  * man: [http://www.sleuthkit.org/sleuthkit/man/](http://www.sleuthkit.org/sleuthkit/man/)
-* Wireshark
-  * [https://www.wireshark.org/](https://www.wireshark.org/)
-  * Also use tshark to play with pcaps in terminal
-  * If it's web traffic, then start with POST requests
-* zsteg
-  * [https://github.com/zed-0xff/zsteg](https://github.com/zed-0xff/zsteg)
-* Images:
-  * [https://29a.ch/photo-forensics/\#forensic-magnifier](https://29a.ch/photo-forensics/#forensic-magnifier)
-  * [http://stylesuxx.github.io/steganography/](http://stylesuxx.github.io/steganography/)
-* Text Files
-  * dos2unix
-    * If the file contain `CRLF line terminators`
-* If given text looks like shit and you have no clue what it is then check for any [esoteric language](https://en.wikipedia.org/wiki/Esoteric_programming_language)
-  * [linguist](https://github.com/github/linguist)
-* For PGP
-  * [https://sela.io/pgp/](https://sela.io/pgp/)
-  * If PGP message or anything related PGP is given then there has to be something else given to the PGP like passphrase, PGP private key soemthing else.
-  * Mostly the passphrase are something from the question.
-* Broken images/zips
-  * One thing to try is to test for the signature of the files.
-    * [https://en.wikipedia.org/wiki/List\_of\_file\_signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
-  * Try: `https://github.com/TheZ3ro/zipfix`
-* Audio files
-  * Sonic visualize: [https://www.sonicvisualiser.org/](https://www.sonicvisualiser.org/)
-  * Audacity: [https://www.audacityteam.org/](https://www.audacityteam.org/)
-  * Check spectrogram first for any given audio file and don't forget to change colors of spectrogram.
-* [https://www.monkey.org/~dugsong/dsniff/](https://www.monkey.org/~dugsong/dsniff/)
-
-### Malware analysis
-
-* Volatility
-* [https://www.hybrid-analysis.com/](https://www.hybrid-analysis.com/)
-  * Upload file and perform malware analysis
-* [https://digital-forensics.sans.org/media/SANS\_Poster\_2018\_Hunt\_Evil\_FINAL.pdf](https://digital-forensics.sans.org/media/SANS_Poster_2018_Hunt_Evil_FINAL.pdf)
-  * Some informations about the files present in windows mem dump
 
 ### Misc
 
