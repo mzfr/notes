@@ -107,3 +107,13 @@ There's lot of type of command injection like `exec` or `system` but you'll have
 
 [https://grosquildu.github.io/pentests/web/](https://grosquildu.github.io/pentests/web/) [https://grosquildu.github.io/pentests/mobile/](https://grosquildu.github.io/pentests/mobile/) [https://grosquildu.github.io/pentests/exp/](https://grosquildu.github.io/pentests/exp/)
 
+
+## XSS
+
+XSS is the new `cool` topic for web challenges these days but I am not very good at this since I haven't done these type of challenges.
+
+But I've done some small XSS on HTB/wizardlabs and following are my go to guides:
+
+1) [Owasp cheatsheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
+
+2) [XSS notes](https://github.com/Anonyme1396/security-tips/blob/master/xss.md)
