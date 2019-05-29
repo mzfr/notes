@@ -1,6 +1,6 @@
-# Forensics
+# Forensics & Steganography
 
-Forensics is a really good field but can be very frustrating sometimes. These are the things I have learned till now about this field.
+Both of these are pretty similar atleast in CTF. Forensics is a really good field but can be very frustrating sometimes. These are the things I have learned till now about this field.
 
 Everything that I've learned in the field of `Forensics` is from __@UnblvR__
 His knowledge in this field is God level and mostly I solve this category of challenges with him.
