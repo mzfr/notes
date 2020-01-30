@@ -7,5 +7,6 @@
 * [Pentesting](pentesting/README.md)
   * [Linux](pentesting/Linux.md)
   * [Windows](pentesting/Windows.md)
-* [Making boot2root VM](pentesting/making_a_VM.md)
+* [Making boot2root VM](VM/README.md)
+    - [Key rules](VM/rules.md)
 
