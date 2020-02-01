@@ -9,5 +9,6 @@
   * [Windows](pentesting/Windows.md)
 * [Making boot2root VM](VM/README.md)
     - [Key rules](VM/rules.md)
+    - [startup services](VM/services.md)
     - [Misc](VM/making_a_VM.md)
 
