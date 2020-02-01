@@ -11,4 +11,4 @@
     - [Key rules](VM/rules.md)
     - [startup services](VM/services.md)
     - [Misc](VM/making_a_VM.md)
-
+* [starting with VIM](Learning-Vim.md)
