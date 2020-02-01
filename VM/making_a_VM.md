@@ -1,6 +1,4 @@
-# Making a boot2root machine/VM
-
-## Misc
+# Misc
 
 * Remove a user from sudoer
     - `sudo deluser USERNAME sudo`
@@ -26,77 +24,6 @@ $ man nuseradd
 * Portknocking
     - https://blog.rapid7.com/2017/10/04/how-to-secure-ssh-server-using-port-knocking-on-ubuntu-linux/
     - http://technical-qa.blogspot.com/2014/10/solution-to-knockd-wont-work-open-port.html
-
-* Use Fixed memory allocation since that is much faster
-* Assign 1 GB RAM first and then test the VM if it's slow or something then extend the RAM .
-    - This helps to test VM on low specs. We might have 8/16GB ram but the person doing might not have that.
-* For ubuntu always use the `server` version and not the GUI/full ISO
-    - http://old-releases.ubuntu.com/releases/
-* For debian
-
-## Supervisor - Systemd
-
-### It's better to use normal systemd rather then putting your head under this supervisor
-
-* For supervisor when you want to autostart some service on boot
-
-https://gist.github.com/mozillazg/6cbdcccbf46fe96a4edd
-
-```
-[program:name]
-directory=/opt/1337
-command=flask run --port 1337
-autostart=true
-autorestart=true
-stopsignal=INT
-stopasgroup=true
-killasgroup=true
-```
-
-Then restart the `supervisor` service
-```bash
-sudo systemctl restart supervisor.service
-```
-
-And then you can check if the service is running by executing
-```
-supervisorctl status
-```
-
-You should see the new app.
-
-Sometime we end up getting error like
-```
-unix:\\\var\run\supervisor.sock no such file
-```
-
-or
-
-```
-error: <class socket.sock>..........
-```
-
-So the fix that seemed to work for me was to run `echo_supervisord_conf > /etc/supervisor/supervisord.conf `
-
-and then reread the config with
-
-```
-supervisorctl -c /etc/supervisord/supervisord.conf reread
-```
-
-and then we should see all the services running.
-
-* Instead of using supervisord prefer going directly for systemd.
-    - https://blog.miguelgrinberg.com/post/running-a-flask-application-as-a-service-with-systemd
-
-## Xinetd
-
-* If you want to run a script with which a person can interact then use `xinted`
-    - https://www.cyberciti.biz/faq/linux-how-do-i-configure-xinetd-service/
-    - Sometimes when you start the xinetd service you might get error about `no service game/tcp` etc if this is the case just open `/etc/services` and add your service name with the port you are running it on.
-    ```
-    game        1337/tcp        #this is a game
-    ```
 
 ## Python script to binary
 
@@ -148,25 +75,4 @@ The best thing is to follow this article
 https://www.tecmint.com/install-wordpress-on-ubuntu-16-04-with-lamp/
 
 Make sure to verify which is the latest version for PHP and wordpress.
-
-## Setting up flask application with SYSTEMD
-
-- https://blog.miguelgrinberg.com/post/running-a-flask-application-as-a-service-with-systemd
-
-Basically make a file named `whatevernameyouwant.service` in `/etc/systemd/system` and write this:
-
-```
-[Unit]
-Description=web application
-After=network.target
-
-[Service]
-User=www-data
-WorkingDirectory=/opt/webapp
-ExecStart=/bin/bash -c "/usr/local/bin/flask run --host 0.0.0.0 --port 80 "
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
 
