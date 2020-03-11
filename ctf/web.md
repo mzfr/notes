@@ -117,3 +117,20 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
 1) [Owasp cheatsheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 
 2) [XSS notes](https://github.com/Anonyme1396/security-tips/blob/master/xss.md)
+
+
+## Misc
+
+* We can assing a proper shell to mysql instead of just /bin/false
+    - /var/lib/mysql/mysql/user.MYD -- this store hashes to root password
+
+* For PHP `usort` we need to end with `}` in RCE.
+    - *?order=id);}system('uname -a');//*
+
+* Break a web application with simple symbols like `'` or `"`
+    - Then try to figure out the correct way to use those
+        + after that move on with your RCE payload
+
+* In python if we import using a magic function then we can directly use the functions.
+    - Ex: `__import__('os').system('ls')`
+    - Ex: `__import__('base64').b64decode('')`
