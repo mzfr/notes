@@ -134,3 +134,11 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
 * In python if we import using a magic function then we can directly use the functions.
     - Ex: `__import__('os').system('ls')`
     - Ex: `__import__('base64').b64decode('')`
+
+
+## LDAP
+
+* For LDAP login:
+    - `hacker)(cn=*))%00`
+        + cn=* - This is the true condition for CN
+    - With this we can login as `hacker` using any password.

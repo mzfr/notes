@@ -8,3 +8,10 @@ I have just started using Vim for writing small scripts while doing CTFs so this
     - `Shift+CTRL+V` - paste
 * quit
     - `:qa!`
+
+* visual mode:
+    - Press `v` to get into visual mode
+    - Use arrow keys to select the text.
+    - d - delete
+    - p - paste
+    - u - undo
