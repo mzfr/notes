@@ -160,6 +160,7 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
         + Continue adding a new number until you stop getting an error.
     -  This can further be exploited by checking if any of those columns are directly reflected on the page.
         +  change those simple 1,2,3 to something absurd(much easier to find in a page)
+    - same parameter can be used to find out version used and finding db name, table name etc
 
 ## XML
 
