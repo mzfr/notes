@@ -155,10 +155,16 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
 * If Character set is GBK then we can use `%bf%27 OR 1=1 --`
     - This is because the `'` get escaped due to `%bf`
 
+* You can use `union` to find the number of columns.
+    - EX: ?id=1 union select 1,2,3
+        + Continue adding a new number until you stop getting an error.
+    -  This can further be exploited by checking if any of those columns are directly reflected on the page.
+        +  change those simple 1,2,3 to something absurd(much easier to find in a page)
+
 ## XML
 
 * XPath
-    - Injecting a single `'` might result in the error. 
+    - Injecting a single `'` might result in the error.
     - And if it shows XPath then you can try fix the error issue by:
         - `]%00` - sqaure brackets with the null byte
     -  `/parent::*` - get all the parent node
@@ -172,3 +178,22 @@ But I've done some small XSS on HTB/wizardlabs and following are my go to guides
     - `hacker<sc<script>ript>alert(1)</sc</script>ript>`
 * `'` can really make a difference. `alert(1)` might work but `'alert('1')'` might not. So make sure to use quotes properly.
 * If an input gets echoed then injecting some random js code something like `";var a"`
+
+
+## Shellshock
+
+So `/cgi-bin/status` or shellshock with CGI basically works because of the issue in the parsing of bash shell.
+
+Using payloads like:
+
+```
+() { :; }; echo "NS:" $(</etc/passwd)
+```
+
+we can read the /etc/passwd file or some other file and even run other commands like `nc` to get reverse shell.
+
+
+## JWT
+
+Sometimes you don't have to find the write secret key to be able hack via JWT.
+The last part is the one that is encrypted with the key so for once you can try to remove the last section and make the `Alg` used to `None`. This mean there doesn't have to be any kind of encyrption in place and then you can try to login as admin.
