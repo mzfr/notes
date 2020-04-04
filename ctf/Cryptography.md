@@ -36,3 +36,13 @@ It's got lot of decoders.
 ## XOR
 
 Xor challenges are also very common in CTF. In some challenges might be directly about XOR like decode/brute-force the given xor cipher or in some challenges you might encounter XOR cipher as the final step or the starting step. In any case mostly you might have to bruteforce the cipher.
+
+
+## AES
+
+### ECB
+
+So ECB is the mode which is generate a kind of pattern in it's encyrtion. Say we are using ECB for cookie purpose in a website now what we can do is register a user with name something like `aaaaa` and then take out the cookie. Then we can register a user with name like `aaaaaadmin`. Usually the auth cookie is specific to a user and envolves a user's name. Now say if it contains a pattern like `username <somerandom junk> passwords <maybe again some junk>`.
+
+What we can do here is that we can find patterns by looking at the hex of the cookie. That would usually give away what kind of junk does the application uses. Once we have found the pattern or the number of bytes or padding we can make a cookie for the admin user and get the access.
+ EX: https://pentesterlab.com/exercises/ecb/course
