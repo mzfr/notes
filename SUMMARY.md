@@ -6,6 +6,7 @@
   * [Web](ctf/web.md)
 * [Pentesting](pentesting/README.md)
   * [Linux](pentesting/Linux.md)
+  * [Netowrks](networks/intercepting.md)
   * [Windows](pentesting/Windows.md)
 * [Making boot2root VM](VM/README.md)
     - [Key rules](VM/rules.md)
