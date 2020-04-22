@@ -76,3 +76,30 @@ https://www.tecmint.com/install-wordpress-on-ubuntu-16-04-with-lamp/
 
 Make sure to verify which is the latest version for PHP and wordpress.
 
+## Setting up virtual hosts on apache2
+
+* Install apache2 and then in `var/www/html` will be the default.
+* Now in `/etc/apache2/sites-available` do the following:
+    - `cp 000-default.conf <name-of-virtual-host>.conf`
+* Open that newly creadted `.conf` file and make changes to `DocumentRoot` and `ServerName` values.
+    - `DocumentRoot` -  this will be the directory which will have the files for the virtual host
+    - `ServerName` - URL/IP/Domain on which this has to be accessed.
+
+```
+ServerAdmin webmaster@localhost
+ServerName mehtab.zafar.tech
+DocumentRoot /var/www/sites     
+```
+
+here when someone try to visit `mehtab.zafar.tech` then the apache will use files from `/var/www/sites` else for other domain/IP it will use the default configuration.
+
+* Run the following command:
+
+```
+a2ensite <name-of-the-conf-without-extension>
+```
+Ex: `a2ensite mehtab` - where configuration file name was `mehtab.conf`
+
+* Now just restart apache
+
+

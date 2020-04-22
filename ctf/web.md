@@ -198,3 +198,5 @@ we can read the /etc/passwd file or some other file and even run other commands 
 
 Sometimes you don't have to find the write secret key to be able hack via JWT.
 The last part is the one that is encrypted with the key so for once you can try to remove the last section and make the `Alg` used to `None`. This mean there doesn't have to be any kind of encyrption in place and then you can try to login as admin.
+
+
