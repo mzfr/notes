@@ -1,5 +1,7 @@
 # Misc
 
+* If you need tor for python script:
+    - https://www.sylvaindurand.org/use-tor-with-python/
 * Remove a user from sudoer
     - `sudo deluser USERNAME sudo`
 * Send message to another user
