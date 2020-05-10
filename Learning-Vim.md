@@ -26,7 +26,7 @@ I have just started using Vim for writing small scripts while doing CTFs so this
 * :set number
     - Show line number
 
-## To Select and comment multiples lines
+## To Select and comment multiple lines
 
 * Select the first caracter of your block
 
