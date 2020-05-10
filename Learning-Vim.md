@@ -25,3 +25,20 @@ I have just started using Vim for writing small scripts while doing CTFs so this
 
 * :set number
     - Show line number
+
+## To Select and comment multiples lines
+
+* Select the first caracter of your block
+
+* press Ctrl+V ( this is rectangular visual selection mode)
+
+* type `j` for each line more you want to be commented
+
+* type `Shift-i` (like I for "insert at start")
+
+* type // (or # or " or ...)
+
+* You will see the modification appearing only on the first line
+
+* IMPORTANT LAST STEP: type Esc key, and there you see the added character appear on all lines
+
