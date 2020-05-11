@@ -1,5 +1,8 @@
 # Misc
 
+* If we want to add a in the sudoers file(/etc/sudoers):
+    - `john ALL=(root) /command/that/is/allowed`
+    - This would give user `john` the power to run the mentioned command as root
 * If you need tor for python script:
     - https://www.sylvaindurand.org/use-tor-with-python/
 * Remove a user from sudoer
