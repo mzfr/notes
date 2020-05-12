@@ -107,4 +107,25 @@ Ex: `a2ensite mehtab` - where configuration file name was `mehtab.conf`
 
 * Now just restart apache
 
+## Setting up Postgres
 
+To install postgres on ubuntu you can run:
+```
+sudo apt install postgresql
+```
+
+After that you can login as `postgres` user and create DB or add users.
+
+- To login as postgres run: `sudo -u postgres psql`
+- Then you can run following commands to create a new DB and add a new USER which have GRANT on that DB.
+
+```
+create database <DB_NAME>;
+create user <USERNAME> with password encrypted password '<your-password>';
+grant all privileges on database <DB_NAME> to <USERNAME>;
+```
+ ### Extra commands in psql
+
+ * `\l` - list all DB
+ * `\du` - list all users
+ * `\c <DBNAME>` - Use the specified DB
