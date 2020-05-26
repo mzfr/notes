@@ -1,3 +1,5 @@
+## 
+
 * We can enable Bluetooth HCI logging from developers options and then do some BLE stuff and there will be a file called `btsnoop_hci.log`.
 
 * `/etc/bluetooth/bt_stack.conf` is the file that hold all the information about the bluetooth configuration.
