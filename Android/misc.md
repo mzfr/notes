@@ -21,3 +21,14 @@ If any Firebase URL is found, try to add `.json` and see if it returns anything.
 
 * Check strings.xml
 
+* After we find the AWS information we can do something like this
+
+```
+aws s3 ls s3://injuredandroid --profile injuredandroid
+```
+* sed -i '/schemas\.android\.com/d' URL.txt       
+
+* amass enum --passive -d <domain.name>
+
+* It's possible that the exported activity doesn't have any kind of checks in them which make them vulnerable:
+    - https://hackerone.com/reports/499348
