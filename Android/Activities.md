@@ -79,3 +79,6 @@ Another way of checking is that see if
 - `settings.setJavaScriptEnabled(true);`
 - DOM setting is enabled or not, it would look similar to line as javascriptEnabled.
 - Also check for `webSettings().setAllowFileAccess(true);`  if it's false then you won't be able to read the files.
+
+
+* Always look for permissions
