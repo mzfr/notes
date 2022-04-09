@@ -8,10 +8,10 @@
 	+ [Forensics](ctf/forensics.md)
 * Making a boot2root VM
 	+ [Important rules](VM/rules.md)
-	+ [General things](VM/Make boot2root VM.md)
+	+ [General](VM/Make_boot2root_VM.md)
 	+ [Setting Systemd services](VM/services.md)
 	+ [Setting fail2ban](VM/fail2ban.md)
-* BugBounty notes for **Android**
+* BugBounty - **Android**
 	+ [General](Android/Android.md)
 	+ [Adb/drozer commands](Android/Commands.md)
 	+ [Intents](Android/Intents.md)
@@ -20,7 +20,7 @@
 	+ [Broadcast Receivers](Android/Broadcast_Receivers.md)
 	+ [Content Providers](Android/Content_Providers.md)
 	+ [Services](Android/Services.md)
-* BugBounty notes for **WEB**
+* BugBounty - **WEB**
 	+ [Authentication](web/Authentication.md)
 	+ [CORS](web/CORS.md)
 	+ [General Web](web/General.md)
