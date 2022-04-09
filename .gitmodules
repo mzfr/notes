@@ -1,0 +1,3 @@
+[submodule "notes.wiki"]
+	path = notes.wiki
+	url = git@github.com:/mzfr/notes.wiki
