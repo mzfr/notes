@@ -54,6 +54,14 @@ nav:
         - 'Running Services': 'VM/services.md'
         - 'fail2ban': 'VM/fail2ban.md'
       - 'Hacking boot2root': 'boot2root.md'
+  
+  - 'Self Hosting':
+    - 'Portainer': 'self_hosting/portainer.md'
+    - 'tt-rss': 'self_hosting/tt-rss.md' 
+    - 'Vikunja': 'self_hosting/vikunja.md'
+    - 'Nginx Proxy Manager': 'self_hosting/nginx-proxy-manager.md'
+    - 'Bookstack': 'self_hosting/bookstack.md'
+
 theme:
   name: material
   icon:
