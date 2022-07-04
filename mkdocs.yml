@@ -1,0 +1,83 @@
+site_name: Garden
+repo_url: https://github.com/mzfr/notes
+nav:
+  - 'Age of Empire IV':
+    - 'Why?': 'AOE/general.md'
+    - 'Scouting':
+      - 'General Tips': 'AOE/Scouting/general.md'
+      - 'Sheep Scouting': 'AOE/Scouting/sheep_scouting.md'
+  
+    - 'Build Orders':
+      - 'AOE/build_orders.md'
+      - 'English':
+        - 'Delayed feudal': 'AOE/english/delayed-feudal-with-better-economy.md'
+        - 'Dark MMA rush': 'AOE/english/dark-age-maa-rush.md'
+        - 'Class English': 'AOE/english/classic-english.md' 
+        - 'Early Wheelbarrow': 'AOE/english/early-wheelbarrow.md'
+      - 'Delhi Sultanate':
+        - 'Sacred Site victory': 'AOE/english/for-sacred-site-victory.md'
+
+    - 'Modding':
+      - 'Generated Maps':
+        - 'General': 'AOE/modding/general.md'
+        - 'Player Spawn': 'AOE/modding/player-spawn.md'
+        - 'Default maps': 'AOE/modding/path-to-default-generated-maps.md'
+  
+  - 'BugBounty':
+    - 'Android':
+      - 'Activities': Android/Activities.md
+      - 'Android': Android/Android.md
+      - 'Broadcast Receivers': Android/Broadcast_Receivers.md
+      - 'Commands': Android/Commands.md
+      - 'Content Providers': Android/Content_Providers.md
+      - 'Intents': Android/Intents.md
+      - 'Permissions': Android/Permissions.md
+      - 'Services': Android/Services.md
+    - 'Web':
+      - 'Authentication': 'Web/Authentication.md'
+      - 'CORS': 'Web/CORS.md'
+      - 'General': 'Web/General.md'
+      - 'poisoning': 'Web/HTTP Parameter poisoning.md'
+      - 'IDOR': 'Web/IDOR.md'
+      - 'graphql': 'Web/graphql.md'
+  
+  - 'Capture The Flag':
+    - 'Jeopardy':
+      - 'Cryptography': 'ctf/Cryptography.md'
+      - 'forensics': 'ctf/forensics.md'
+      - 'tools': 'ctf/tools.md'
+      - 'web': 'ctf/web.md'
+    - 'boot2root':
+      - 'Making boot2root VM':
+        - 'General': 'VM/Make_boot2root_VM.md'
+        - "Do's and Don'ts": 'VM/rules.md'
+        - 'Running Services': 'VM/services.md'
+        - 'fail2ban': 'VM/fail2ban.md'
+      - 'Hacking boot2root': 'boot2root.md'
+theme:
+  name: material
+  features:
+    - navigation.expand
+  features:
+    - header.autohide
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+    - redirects:
+        redirect_maps:
+          'books/scouting/page/sheep-scouting': 'AOE/Scouting/sheep_scouting.md'
+          'shelves/age-of-empire-iv': 'AOE/general.md'
+          'books/build-orders': 'AOE/build_orders.md'
+          'books/modding': 'AOE/modding/general.md'
+          'books/scouting': 'AOE/Scouting/general.md'
+
