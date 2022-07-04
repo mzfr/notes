@@ -1,0 +1,1606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>forensics - Garden</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#forensics-steganography" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Garden" class="md-header__button md-logo" aria-label="Garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Garden
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              forensics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mzfr/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Garden" class="md-nav__button md-logo" aria-label="Garden" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Garden
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mzfr/notes" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          Age of Empire IV
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Age of Empire IV" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Age of Empire IV
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/general/" class="md-nav__link">
+        Why?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2">
+          Scouting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scouting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Scouting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/Scouting/general/" class="md-nav__link">
+        General Tips
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/Scouting/sheep_scouting/" class="md-nav__link">
+        Sheep Scouting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" type="checkbox" id="__nav_1_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3">
+          Build Orders
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Build Orders" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Build Orders
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/build_orders/" class="md-nav__link">
+        Build orders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_2" type="checkbox" id="__nav_1_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3_2">
+          English
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="English" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          English
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/delayed-feudal-with-better-economy/" class="md-nav__link">
+        Delayed feudal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/dark-age-maa-rush/" class="md-nav__link">
+        Dark MMA rush
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/classic-english/" class="md-nav__link">
+        Class English
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/early-wheelbarrow/" class="md-nav__link">
+        Early Wheelbarrow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3_3" type="checkbox" id="__nav_1_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_3_3">
+          Delhi Sultanate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Delhi Sultanate" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Delhi Sultanate
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/english/for-sacred-site-victory/" class="md-nav__link">
+        Sacred Site victory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4" type="checkbox" id="__nav_1_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4">
+          Modding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modding" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_4">
+          <span class="md-nav__icon md-icon"></span>
+          Modding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_4_1" type="checkbox" id="__nav_1_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_4_1">
+          Generated Maps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Generated Maps" data-md-level="3">
+        <label class="md-nav__title" for="__nav_1_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Generated Maps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/player-spawn/" class="md-nav__link">
+        Player Spawn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AOE/modding/path-to-default-generated-maps/" class="md-nav__link">
+        Default maps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          BugBounty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BugBounty" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          BugBounty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Activities/" class="md-nav__link">
+        Activities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Broadcast_Receivers/" class="md-nav__link">
+        Broadcast Receivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Content_Providers/" class="md-nav__link">
+        Content Providers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Intents/" class="md-nav__link">
+        Intents
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Permissions/" class="md-nav__link">
+        Permissions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Android/Services/" class="md-nav__link">
+        Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Web
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Web
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/Authentication/" class="md-nav__link">
+        Authentication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/CORS/" class="md-nav__link">
+        CORS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/General/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/HTTP%20Parameter%20poisoning/" class="md-nav__link">
+        poisoning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/IDOR/" class="md-nav__link">
+        IDOR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web/graphql/" class="md-nav__link">
+        graphql
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Capture The Flag
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Capture The Flag" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Capture The Flag
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Jeopardy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jeopardy" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Jeopardy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cryptography/" class="md-nav__link">
+        Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          forensics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        forensics
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initiation" class="md-nav__link">
+    Initiation
+  </a>
+  
+    <nav class="md-nav" aria-label="Initiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-strings-in-that-image" class="md-nav__link">
+    Checking the strings in that image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-metadata" class="md-nav__link">
+    Check the Metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binwalk-or-foremost" class="md-nav__link">
+    Binwalk or foremost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steghide" class="md-nav__link">
+    Steghide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stegoveritas" class="md-nav__link">
+    StegoVeritas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsteg" class="md-nav__link">
+    Zsteg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          boot2root
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="boot2root" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          boot2root
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_1" type="checkbox" id="__nav_3_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_1">
+          Making boot2root VM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Making boot2root VM" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Making boot2root VM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/Make_boot2root_VM/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/rules/" class="md-nav__link">
+        Do's and Don'ts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/services/" class="md-nav__link">
+        Running Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VM/fail2ban/" class="md-nav__link">
+        fail2ban
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../boot2root/" class="md-nav__link">
+        Hacking boot2root
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#initiation" class="md-nav__link">
+    Initiation
+  </a>
+  
+    <nav class="md-nav" aria-label="Initiation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-the-strings-in-that-image" class="md-nav__link">
+    Checking the strings in that image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-metadata" class="md-nav__link">
+    Check the Metadata
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraction" class="md-nav__link">
+    Extraction
+  </a>
+  
+    <nav class="md-nav" aria-label="Extraction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binwalk-or-foremost" class="md-nav__link">
+    Binwalk or foremost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steghide" class="md-nav__link">
+    Steghide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stegoveritas" class="md-nav__link">
+    StegoVeritas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zsteg" class="md-nav__link">
+    Zsteg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/mzfr/notes/edit/master/docs/ctf/forensics.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="forensics-steganography">Forensics &amp; Steganography</h1>
+<p>Both of these are pretty similar atleast in CTF. Forensics is a really good field but can be very frustrating sometimes. These are the things I have learned till now about this field.</p>
+<p>Everything that I've learned in the field of <code>Forensics</code> is from <strong>@UnblvR</strong>
+His knowledge in this field is God level and mostly I solve this category of challenges with him.</p>
+<h2 id="initiation">Initiation</h2>
+<p>These are the some tools/command you should always start with or atleast test for forensics challenge</p>
+<h3 id="checking-the-strings-in-that-image">Checking the <code>strings</code> in that image</h3>
+<pre><code class="language-text">&gt;&gt;&gt; strings &lt;file_name&gt;
+</code></pre>
+<p>strings is a Linux command that gives you all the string present in the image. Most of the time you'll find the flag here in normal or base64 format. To make your work easy you can use it with <code>grep</code></p>
+<pre><code class="language-text">    &gt;&gt;&gt; strings &lt;file_name&gt; | grep -i &lt;string_to_be_searched&gt;
+</code></pre>
+<pre><code class="language-text">The `-i` flag is for `ignoring the case(lower/upper)`
+</code></pre>
+<h3 id="check-the-metadata">Check the Metadata</h3>
+<p>Always check the metadata of the file you are given(unless the file is of unknown type). <a href="https://github.com/exiftool">Exiftool</a> is basically the best tool for this job. Metadata can give you lots of things like maybe there's an <code>author note</code> or <code>comment</code> or base64 strings. Sometimes images/files can have location headers in metadata, so say you are asked to find the location of some bogus HQ, start with metadata and see if there are any longitude or latitude header in there if yes then that might be the location which you are looking for.</p>
+<p>Things might not be that easy always but it's really helpful to check the metadata.</p>
+<h2 id="extraction">Extraction</h2>
+<p>Most of the time forensics challenges involve extracting files from an image or random data files. So here are the tricks/tools you can use to do so</p>
+<h4 id="binwalk-or-foremost"><a href="https://github.com/ReFirmLabs/binwalk">Binwalk</a> or <a href="https://github.com/korczis/foremost">foremost</a></h4>
+<p>Both of these tools are almost the same and they are used to extract hidden files(if any) in the image or any other file.</p>
+<pre><code class="language-text">&gt;&gt;&gt; binwalk -e &lt;filename&gt;
+&gt;&gt;&gt; foremost -i &lt;filename&gt;
+</code></pre>
+<p>You can use any of those commands and you'll get all the files that could be extracted.</p>
+<p>If you are using binwalk then you'll notice that binwalk almost every time gives you some <code>.zlib</code> file which actually isn't useful most of the time but you still wanna <code>grep</code> that file with <code>flag</code> format</p>
+<pre><code class="language-text">grep -i flag *
+</code></pre>
+<p>You can run that command in the recovered files directory just to be sure.</p>
+<h4 id="steghide"><a href="https://github.com/StefanoDeVuono/steghide">Steghide</a></h4>
+<p>I don't use this tool very often but sometimes the challenge is purely focused on this tool so I use it for simple extraction of a file. Sometimes using binwalk/foremost won't extract any file even if it's there because those files aren't hidden in a normal way. Steghide takes passphrase to extract the file, so if any challenge mention something about the passphrase or it hint's you in a way that steghide is involved then you'll need the passphrase.</p>
+<pre><code class="language-text"> steghide extract -sf fixed.bmp
+</code></pre>
+<p>With the command mentioned above, you can extract files hidden inside.</p>
+<p><strong>Where to find the PassPhrase?</strong></p>
+<p>Well this can vary from the difficulty of the challenge like if it's an easy challenge then there will be some hint provided in the problem statement itself, say the you are given an image of guys sitting with laptops and the hint says <code>what are they?</code> then you can guess with words like <code>geeks</code>, <code>hackers</code> and stuff.</p>
+<p>Other than that the passphrase could be present in the metadata of that file. For that, you might wanna use <code>exiftool</code> and check for something different maybe <code>author's note</code> or <code>comment</code> or maybe a base64 string present.</p>
+<p>Also if the challenge is difficult then surely there would be other hints/statement provide. Sometimes there are challenges that have to be brute forced in that case you can use scripts like <a href="https://github.com/Va5c0/Steghide-Brute-Force-Tool/blob/master/steg_brute.py">steg_brute</a> or <a href="https://github.com/Paradoxis/StegCracker/blob/master/stegcracker">stegcracker</a> or simple code like</p>
+<pre><code class="language-bash">for passphrase in $(cat $2); do
+  response=$(steghide extract -sf $1 -p &quot;$passphrase&quot; 2&gt;&amp;1);
+  if [[ ! $response == *&quot;could not extract&quot;* ]]; then
+    printf &quot;%s\n\n&quot; &quot;$response&quot;;
+    exit
+  fi
+done
+</code></pre>
+<p><strong>NOTE</strong> There is rarely any challenge that will ask you to brute force steghide, so instead of direct brute-forcing, it tries to figure out the password from whatever you are given.</p>
+<h4 id="stegoveritas"><a href="https://github.com/bannsec/stegoVeritas/">StegoVeritas</a></h4>
+<p>I recently came to know about this tool(thanks to <strong>UnblvR</strong>) and started using this, mostly for <a href="https://en.wikipedia.org/wiki/Bit_numbering#Least_significant_bit">LSB</a> extraction and some time for normal file extraction. There can be a challenge which might be hiding stuff in LSB so you can simply use this script like</p>
+<pre><code class="language-bash">python stegoVeritas &lt;filename&gt;
+</code></pre>
+<p>This will generate a lot of images with all the different pixels in different shades and stuff. Also, it makes a folder name <code>result</code> which sometimes contains any kind of hidden file.</p>
+<h4 id="zsteg"><a href="https://github.com/zed-0xff/zsteg">Zsteg</a></h4>
+<p>I don't use this tool anymore but this tool is worth a try. The problem with this tool is that it doesn't support jpeg and different type of extensions(only supports PNG). I used this tool for a while but now for LSB and stuff you can use StegoVeritas.</p>
+<h1 id="audio-analysis">Audio analysis</h1>
+<p>This is a category of forensics challenges are the weird ones or at least that's how I feel :smile:</p>
+<p>For most of the audio file, you can use <a href="https://www.audacityteam.org/">audacity</a> or <a href="https://www.sonicvisualiser.org/">Sonic Visualiser</a>.</p>
+<p>Now there isn't anything fixed but most of the time challenge creator puts the flag in the <a href="https://en.wikipedia.org/wiki/Spectrogram">spectrogram</a> and for that, I have found Sonic visualizer more helpful then audacity, but that's just a personal preference you can get that in both(audacity or sonic). Just get the Spectogram and try to change the color or width of the spectrogram.</p>
+<p>In many audio files, there would be some high pitch, in that case, you can try the <a href="https://morsecode.scphillips.com/labs/decoder/">audio morse decoder</a>. Just upload the file and try to change the speed(only if you are sure that it's a morse code).</p>
+<h1 id="databroken-files">Data/Broken files</h1>
+<p>Now, this is the most difficult category of challenges. They are difficult because they are totally vague.</p>
+<p><strong>What kind of challenges are involved in this?</strong></p>
+<p>Well a file will be provided and if you try to check the type using file command you'll nothing like</p>
+<pre><code class="language-bash">file &lt;filename&gt;
+&gt;&gt;&gt; file: data
+</code></pre>
+<p>As you can see the file command doesn't show anything. Also, you won't be able to open the file in anything like when you double click the file system will ask you with which application you'll like to open the file.</p>
+<p><strong>How to tackle them?</strong></p>
+<p>Well, this is not as easy as using binwalk or string. I am also currently in the process of learning but I'll share what I know.</p>
+<p>1) It could be as easy as using binwalk on it :smile:</p>
+<p>Sometime someone might have just hidden the stuff and that "stuff" could be extracted using binwalk or foremost or any other extraction tool. In that case, it would totally depend on what you get after extraction.</p>
+<p>2) When the headers are messed up</p>
+<p>As I said in the starting that even the <code>file</code> command may also fail, that's because file command looks for specific headers in the starting of the file and if those are recognized it reports the file type.</p>
+<p><strong>NOTE</strong> <code>file</code> command doesn't only looks for the header it also finds some other magic number at specific positions. You can read more: <a href="https://en.wikipedia.org/wiki/File_%28command">https://en.wikipedia.org/wiki/File_(command</a>)</p>
+<p>Now, this type can vary from very easy to difficult.</p>
+<p>The easy ones could be checking the header with <a href="http://www.tutorialspoint.com/unix_commands/xxd.htm"><code>xxd</code></a> or <a href="https://github.com/sharkdp/hexyl"><code>hexyl</code></a> to find the header</p>
+<pre><code class="language-bash">&gt;&gt;&gt; xxd -l8 &lt;filename&gt;
+</code></pre>
+<p>or</p>
+<pre><code class="language-bash">&gt;&gt;&gt; hexyl -n8 &lt;filename&gt;
+</code></pre>
+<p>In both of the command, the number <code>8</code> gives the first 8 octets bytes of the file(the headers). If the headers are messed up you can look for similar kind of headers of <a href="https://en.wikipedia.org/wiki/List_of_file_signatures">wikipedia</a> or <a href="https://www.filesignatures.net/">filesignature.net</a> and try fixing it.</p>
+<p><strong>Example:</strong></p>
+<p>Say we are given an image called <code>hack.png</code> using xxd</p>
+<pre><code class="language-bash">&gt;&gt;&gt; xxd -l8 hack.png
+45 65 4E 47 0D 0A 1A 0A
+</code></pre>
+<p>These aren't any valid headers but if you replace the <code>45</code> with <code>89</code> and replace the <code>65</code> with <code>50</code> i.e the headers become</p>
+<pre><code class="language-text">89 50 4E 47 0D 0A 1A 0A
+</code></pre>
+<p>That would make it a valid PNG file and then you can see what's in it.</p>
+<p>This same challenge could be made difficult by keeping the headers of a valid file and the other remaining content/data of different file type which can confuse you.</p>
+<p><strong>Example:</strong></p>
+<p>We are given a file which is of say <code>.PNG</code> extension. Using <code>file</code> command on it confirms that it's PNG but when we try to open the file in any viewer we can't see anything or the viewer gives an error like <code>Cannot open the file</code> etc That can be very confusing.</p>
+<p>The real game could be that creator of the challenge took a ZIP file and replaced the header of that ZIP file with the headers of PNG so tools are reporting it as PNG. But the problem with these kinds of challenges is that they are totally based on how much experience you have with file and stuff. Because to solve these kinds of challenge you'll have to open the file in a hex editor(I use <a href="https://www.kde.org/applications/utilities/okteta/">okteta</a> on arch) and then try to recognize the file with the other bytes in the file. Then figure out which byte is messed up and fix that one.</p>
+<h1 id="memory-forensics">Memory forensics</h1>
+<p>I just love these kinds of challenges, even though I am very bad at them but I really enjoy working on them.</p>
+<p><strong>What type of challenges are included in this category?</strong></p>
+<p>Basically you are provided with a memory dump of a hard drive and then you have to answer questions based on them.</p>
+<p>I first came across this type of challenges in OtterCTF 2018 (read my <a href="https://github.com/mzfr/ctf-writeups/tree/master/OtterCTF%202018/Memory%20Forensics">writeups</a>).</p>
+<p><strong>How to tackle them?</strong></p>
+<p><a href="https://github.com/volatilityfoundation/volatility">Volatility</a> is your answer. It's a collection of a tool which basically helps you figure stuff out.</p>
+<p>You can refer to the following resources for volatility usage:</p>
+<p>1) <a href="https://downloads.volatilityfoundation.org/releases/2.4/CheatSheet_v2.4.pdf">PDF</a></p>
+<p>2) <a href="https://digital-forensics.sans.org/media/volatility-memory-forensics-cheat-sheet.pdf">SANS Cheatsheet</a></p>
+<p>3) <a href="https://github.com/volatilityfoundation/volatility/wiki/Command-Reference">Command reference</a></p>
+<p>4) <a href="https://www.aldeid.com/wiki/Volatility">aldeid examples</a></p>
+<p><strong>Most common type of questions that are asked :=</strong></p>
+<p><strong>1)</strong> hostname and computer name of the user</p>
+<p>For hostname - Read <a href="https://www.aldeid.com/wiki/Volatility/Retrieve-hostname">https://www.aldeid.com/wiki/Volatility/Retrieve-hostname</a> For Password - Read <a href="https://www.aldeid.com/wiki/Volatility/Retrieve-password">https://www.aldeid.com/wiki/Volatility/Retrieve-password</a></p>
+<p>You can also use <a href="https://raw.githubusercontent.com/dfirfpi/hotoloti/master/volatility/mimikatz.py">mimkatz</a></p>
+<pre><code class="language-bash">volatility  — plugins=&lt;path-to-mimkatz-file&gt; — profile=&lt;profile-name&gt; -f &lt;memory dump&gt; mimikatz
+</code></pre>
+<p>Sometime mimikatz doesn't give any output in that case you can just follow the first method.</p>
+<p><strong>2)</strong> Find the IP and port for computer:</p>
+<pre><code>Just run the netscan command and go through the output.
+</code></pre>
+<p><strong>3)</strong> Find the content clipboard</p>
+<pre><code>Again use the simple `clipboard` command to get the content of the clipboard.
+</code></pre>
+<p><strong>4)</strong> Finding out the malware</p>
+<pre><code>This is the real reason these kinds of challenges are made.
+In real life scenario, people take memory dumps just to analyze for malware.
+</code></pre>
+<p>Finding malware could be confusing if you don't know what files stays in what place and what they do. For that kind of information, you can read:</p>
+<p>1) <a href="https://www.sans.org/security-resources/posters/dfir-find-evil/35/download">https://www.sans.org/security-resources/posters/dfir-find-evil/35/download</a></p>
+<p>2) <a href="https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download">https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download</a></p>
+<p>Basically, you have to go through the <code>pstree</code> and see which process is the child to some weird parent process. Say there is a process named <code>iexplorer.exe</code> running but it has a child process named <code>cmd.exe</code> which is weird because if you think about it why would <code>iexplorer</code> run <code>cmd</code> for anything. So then you can start looking deeply into those process.</p>
+<p>Also sometime you might have to extract out those files and try to run those malware(please do that in VM :wink:)</p>
+<hr />
+<p>Another type memory forensics challenge I came across was in one CTF where we were given the memory dump along with a <code>.dwarf</code> &amp; <code>system.map</code> file.
+If you see these files provided with the memory dump then it's the profile for that memory dump.
+Basically if you run <code>volatility</code> on that memory dump it won't be able to suggest the <code>profile</code> of that dump. That is where those other two files come in handy.</p>
+<p>Step to use those files:</p>
+<p>1) Zip <code>.dwarf</code> and <code>system.map</code> file together.
+2) Put that zip file in a folder
+3) Pass that folder to the <code>--plugin</code> argument in volatility.</p>
+<p>Ex:</p>
+<p><code>vol.py --plugins=/path/to/zip/containing/folder -f &lt;memdump name&gt;  imageinfo</code></p>
+<p><strong>Note</strong> - It's important that you keep the zip file into a folder and pass that folder to the plugin argument</p>
+<p>Nothing much can be said about this field because things are pretty fixed like you know the command are known and all it needs is patience to figure out stuff.</p>
+<h2 id="pcap-files">PCAP files</h2>
+<p>These ones are again some pretty vague and there isn't anything fixed here. Basically, you are provided with a PCAP file and that would have what you are looking for. Best way to analyze them is <a href="https://www.wireshark.org/">Wireshark</a>. After opening you can see the protocols, if there are any HTTP or SMTP type then best is to export all the objects that could be exported and try looking into them. If it has some weird(not very common) protocol then it's just best to try analyzing the requests and find some pattern.</p>
+<p>Sometime you'll have to trim all the PDUs with some specific size to actually get the correct PCAP sometime you'll have to see hidden stuff in the Stream.</p>
+<p>Also you might be asked question like <code>Ip of the attacker</code> or <code>Ip of the host</code> or <code>Which port was open</code> etc for these kind of things you can use tshark like</p>
+<pre><code class="language-text">➜ tshark -r capture.pcap -z conv,tcp -q
+</code></pre>
+<p>This will give you a list of ports along with IP.</p>
+<p>You can also use <a href="https://scapy.net/">scapy</a> to grab some data that might not be clear with wireshark or couldn't be extracted using wireshark. For example protocols like <code>ICMP</code>.</p>
+<p>Another great tool for PCAP is <a href="https://github.com/jpr5/ngrep">ngrep</a></p>
+<h1 id="file-system">File System</h1>
+<p>These kind of challenges involve <code>.img</code> or similar files from which you are expected to extract content or deleted files and do the stuff. Most of these challenges are pretty straight forward(unless bytes of those files are messed up).</p>
+<p>You can use <a href="https://www.cgsecurity.org/wiki/TestDisk"><code>testdisk</code></a> or <a href="https://www.cgsecurity.org/wiki/PhotoRec"><code>photorec</code></a>. These tools extracts most of the files so you don't have to mount the image etc.But sometime(when size is large) you should mount the file and then analyse everything. Start looking from the <code>/home</code> and then follow the trail.</p>
+<p>You can then focus on logs like <code>auth.log</code> that will tell you who has logged in and on what time. That can be then used to find files after that period of time.</p>
+<pre><code class="language-text">➜ find . -type f -newermt &quot;Feb 17 00:06:04&quot;
+</code></pre>
+<p>The above command find all the files that were changed on 17 Feb at 00:06:04</p>
+<p>This is just the example, but point to keep in mind is that if the filesystem in big in size just mount it.</p>
+<p>Sometime you might end up having an ecrypted file system which you have to decrypt first using a password. Now if some other info is given about the password use that but if you are expected to bruteforce that password then the best and maybe the only possible way is to dump the header of that file which will contain the hashes of the password and then use that dump with hashcat to crack it.</p>
+<p>You can use <code>dd</code> command to dump the headers(you need offset for that).</p>
+<h2 id="tools">Tools</h2>
+<p>Some other tools that can be used are:</p>
+<p>1) <a href="https://29a.ch/photo-forensics/#forensic-magnifier">https://29a.ch/photo-forensics/#forensic-magnifier</a></p>
+<p>This can be used in the type of challenges in which an image is made of multiple layers and you have to look into that. Ex: [PicoCTF's Now you don't](<a href="https://github.com/mzfr/ctf-writeups/tree/master/picoCTF-2018/Forensics/now%20you%20don't%20">https://github.com/mzfr/ctf-writeups/tree/master/picoCTF-2018/Forensics/now you don't </a>)</p>
+<p>2) <a href="https://www.sleuthkit.org/sleuthkit/">SleuthKit</a></p>
+<p>This is a very powerful tool but you must have some knowledge about file stuff like bytes etc.</p>
+<p>3) <a href="https://crontab.guru/">crontab expression decoder</a></p>
+<p>Basically there are some stars <code>*</code> and stuff in crontab file so that could be changed using this.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../Cryptography/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cryptography" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Cryptography
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../tools/" class="md-footer__link md-footer__link--next" aria-label="Next: tools" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              tools
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+    
+  </body>
+</html>
