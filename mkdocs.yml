@@ -95,4 +95,9 @@ plugins:
           'books/build-orders': 'AOE/build_orders.md'
           'books/modding': 'AOE/modding/general.md'
           'books/scouting': 'AOE/Scouting/general.md'
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
