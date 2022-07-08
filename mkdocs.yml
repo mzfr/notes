@@ -15,7 +15,9 @@ nav:
         - 'Class English': 'AOE/english/classic-english.md' 
         - 'Early Wheelbarrow': 'AOE/english/early-wheelbarrow.md'
       - 'Delhi Sultanate':
-        - 'Sacred Site victory': 'AOE/english/for-sacred-site-victory.md'
+        - 'Sacred Site victory': 'AOE/delhi/for-sacred-site-victory.md'
+      - 'Abbasid Dynasty':
+        - 'BeastyQt 2TC Opener': 'AOE/abbasid/2tc.md'
 
     - 'Modding':
       - 'Generated Maps':
