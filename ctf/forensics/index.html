@@ -1488,7 +1488,7 @@ done
 <h4 id="zsteg"><a href="https://github.com/zed-0xff/zsteg">Zsteg</a></h4>
 <p>I don't use this tool anymore but this tool is worth a try. The problem with this tool is that it doesn't support jpeg and different type of extensions(only supports PNG). I used this tool for a while but now for LSB and stuff you can use StegoVeritas.</p>
 <h1 id="audio-analysis">Audio analysis</h1>
-<p>This is a category of forensics challenges are the weird ones or at least that's how I feel :smile:</p>
+<p>This is a category of forensics challenges are the weird ones or at least that's how I feel <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <p>For most of the audio file, you can use <a href="https://www.audacityteam.org/">audacity</a> or <a href="https://www.sonicvisualiser.org/">Sonic Visualiser</a>.</p>
 <p>Now there isn't anything fixed but most of the time challenge creator puts the flag in the <a href="https://en.wikipedia.org/wiki/Spectrogram">spectrogram</a> and for that, I have found Sonic visualizer more helpful then audacity, but that's just a personal preference you can get that in both(audacity or sonic). Just get the Spectogram and try to change the color or width of the spectrogram.</p>
 <p>In many audio files, there would be some high pitch, in that case, you can try the <a href="https://morsecode.scphillips.com/labs/decoder/">audio morse decoder</a>. Just upload the file and try to change the speed(only if you are sure that it's a morse code).</p>
@@ -1502,7 +1502,7 @@ done
 <p>As you can see the file command doesn't show anything. Also, you won't be able to open the file in anything like when you double click the file system will ask you with which application you'll like to open the file.</p>
 <p><strong>How to tackle them?</strong></p>
 <p>Well, this is not as easy as using binwalk or string. I am also currently in the process of learning but I'll share what I know.</p>
-<p>1) It could be as easy as using binwalk on it :smile:</p>
+<p>1) It could be as easy as using binwalk on it <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <p>Sometime someone might have just hidden the stuff and that "stuff" could be extracted using binwalk or foremost or any other extraction tool. In that case, it would totally depend on what you get after extraction.</p>
 <p>2) When the headers are messed up</p>
 <p>As I said in the starting that even the <code>file</code> command may also fail, that's because file command looks for specific headers in the starting of the file and if those are recognized it reports the file type.</p>
@@ -1561,7 +1561,7 @@ In real life scenario, people take memory dumps just to analyze for malware.
 <p>1) <a href="https://www.sans.org/security-resources/posters/dfir-find-evil/35/download">https://www.sans.org/security-resources/posters/dfir-find-evil/35/download</a></p>
 <p>2) <a href="https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download">https://www.sans.org/security-resources/posters/windows-forensics-evidence-of/75/download</a></p>
 <p>Basically, you have to go through the <code>pstree</code> and see which process is the child to some weird parent process. Say there is a process named <code>iexplorer.exe</code> running but it has a child process named <code>cmd.exe</code> which is weird because if you think about it why would <code>iexplorer</code> run <code>cmd</code> for anything. So then you can start looking deeply into those process.</p>
-<p>Also sometime you might have to extract out those files and try to run those malware(please do that in VM :wink:)</p>
+<p>Also sometime you might have to extract out those files and try to run those malware(please do that in VM <img alt="😉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f609.svg" title=":wink:" />)</p>
 <hr />
 <p>Another type memory forensics challenge I came across was in one CTF where we were given the memory dump along with a <code>.dwarf</code> &amp; <code>system.map</code> file.
 If you see these files provided with the memory dump then it's the profile for that memory dump.
