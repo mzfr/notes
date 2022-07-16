@@ -59,10 +59,13 @@ nav:
   
   - 'Self Hosting':
     - 'Portainer': 'self_hosting/portainer.md'
-    - 'tt-rss': 'self_hosting/tt-rss.md' 
-    - 'Vikunja': 'self_hosting/vikunja.md'
     - 'Nginx Proxy Manager': 'self_hosting/nginx-proxy-manager.md'
     - 'Bookstack': 'self_hosting/bookstack.md'
+    - 'tt-rss': 'self_hosting/tt-rss.md' 
+    - 'Vikunja': 'self_hosting/vikunja.md'
+    - 'calibre-web': 'self_hosting/calibre-web.md'
+    - 'Syncthing': 'self_hosting/syncthing.md'
+
 
 theme:
   name: material
