@@ -1,6 +1,6 @@
 # Vikunja
 
-I was looking for a good To-Do list application and came across [vikunja](). I tried it and have found it to be really good.
+I was looking for a good To-Do list application and came across [vikunja](https://vikunja.io/). I tried it and have found it to be really good.
 
 ## How to
 
@@ -47,13 +47,13 @@ services:
     restart: unless-stopped
 ```
 * Go to portainer, click on stacks -> new stack and paste the above yaml file.
-    - Read this([https://wiki.mzfr.me/books/applications/page/portainer](https://wiki.mzfr.me/books/applications/page/portainer)) to see how to setup portainer
+    - Read this([https://wiki.mzfr.me/books/applications/page/portainer](https://wiki.mzfr.me/self_hosting/portainer/)) to see how to setup portainer
 * Click on deploy
 
 If everything worked then you should be able to see your vikunja application on `<you_ip_or_domain>:8973`
 
 ### Using it with mobile application
 
-Vikunja have a mobile application but its not very stable, I believe. So to be able to have a proper sync between mobile and the web application I use combination of [OpenTask]() and [Davx^5]().
+Vikunja have a mobile application but its not very stable, I believe. So to be able to have a proper sync between mobile and the web application I use combination of [OpenTask](https://opentasks.app/) and [Davx^5](https://www.davx5.com/).
 
 You can download both of them from Google Play store or F-droid.
