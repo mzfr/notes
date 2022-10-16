@@ -14,6 +14,7 @@ nav:
         - 'Dark MMA rush': 'AOE/english/dark-age-maa-rush.md'
         - 'Class English': 'AOE/english/classic-english.md' 
         - 'Early Wheelbarrow': 'AOE/english/early-wheelbarrow.md'
+        - 'English 2TC': 'AOE/english/english-2tc.md'
       - 'Delhi Sultanate':
         - 'Sacred Site victory': 'AOE/delhi/for-sacred-site-victory.md'
       - 'Abbasid Dynasty':
@@ -59,10 +60,13 @@ nav:
   
   - 'Self Hosting':
     - 'Portainer': 'self_hosting/portainer.md'
-    - 'tt-rss': 'self_hosting/tt-rss.md' 
-    - 'Vikunja': 'self_hosting/vikunja.md'
     - 'Nginx Proxy Manager': 'self_hosting/nginx-proxy-manager.md'
     - 'Bookstack': 'self_hosting/bookstack.md'
+    - 'tt-rss': 'self_hosting/tt-rss.md' 
+    - 'Vikunja': 'self_hosting/vikunja.md'
+    - 'calibre-web': 'self_hosting/calibre-web.md'
+    - 'Syncthing': 'self_hosting/syncthing.md'
+
 
 theme:
   name: material

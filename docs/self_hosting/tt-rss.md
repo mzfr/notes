@@ -72,7 +72,7 @@ networks:
 
 Now just go to your portainer instance and click on `stacks -> new stack`, enter the name of the stack(anything you like), paste the docker-compose and click on the deploy button.
 
-* To see how to setup portainer, read this - [Installing portainer](https://wiki.mzfr.me/books/applications/page/portainer)
+* To see how to setup portainer, read this - [Installing portainer](https://wiki.mzfr.me/self_hosting/portainer/)
 
 If everything was done correctly then you should have tt-rss running on `<youIP>:7869`. 
 
