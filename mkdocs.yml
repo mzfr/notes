@@ -66,6 +66,9 @@ nav:
     - 'Vikunja': 'self_hosting/vikunja.md'
     - 'calibre-web': 'self_hosting/calibre-web.md'
     - 'Syncthing': 'self_hosting/syncthing.md'
+    - 'fly.io':
+      - 'libreddit': 'self_hosting/libreddit.md'
+      - 'umami': 'self_hosting/umami.md'
 
 
 theme:
